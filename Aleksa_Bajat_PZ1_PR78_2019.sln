@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aleksa_Bajat_PZ1_PR78_2019", "Aleksa_Bajat_PZ1_PR78_2019\Aleksa_Bajat_PZ1_PR78_2019.csproj", "{5C63CD75-DFF0-4AF8-ACED-25E51EEF30A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{F8B8F15C-9134-4A0A-AA7D-57AAB6BC7C1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C63CD75-DFF0-4AF8-ACED-25E51EEF30A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C63CD75-DFF0-4AF8-ACED-25E51EEF30A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C63CD75-DFF0-4AF8-ACED-25E51EEF30A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C63CD75-DFF0-4AF8-ACED-25E51EEF30A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B8F15C-9134-4A0A-AA7D-57AAB6BC7C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B8F15C-9134-4A0A-AA7D-57AAB6BC7C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B8F15C-9134-4A0A-AA7D-57AAB6BC7C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B8F15C-9134-4A0A-AA7D-57AAB6BC7C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F2F9B8B-C5DC-4624-9464-AFCA56DF6236}
+	EndGlobalSection
+EndGlobal

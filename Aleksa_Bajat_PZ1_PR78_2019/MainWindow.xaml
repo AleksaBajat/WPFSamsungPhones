@@ -1,0 +1,65 @@
+﻿<Window x:Class="Aleksa_Bajat_PZ1_PR78_2019.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aleksa_Bajat_PZ1_PR78_2019"
+        mc:Ignorable="d"
+        Title="Samsung Phones" WindowStyle="None" AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown" Width="866">
+    <Canvas Height="400" Width="800">
+        <Path Stroke="Gray" StrokeThickness="1" Name="UIPath">
+            <Path.Fill>
+                <SolidColorBrush Color="GhostWhite"></SolidColorBrush>
+            </Path.Fill>
+
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="50,0">
+                        <ArcSegment Size="40,100" RotationAngle="180" IsLargeArc="True" Point="50,400"></ArcSegment>
+                        <LineSegment Point="750,400"></LineSegment>
+                        <ArcSegment Size="40,100" RotationAngle="180" SweepDirection="Counterclockwise" IsLargeArc="True" Point="750,0"></ArcSegment>
+                        <LineSegment Point="50,0"></LineSegment>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+
+
+        <DataGrid Name="DataGrid" Height="240" Canvas.Left="41" Canvas.Top="138" Width="724" ItemsSource="{Binding PhoneList}" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Name="img" Height="80" Width="80" Source="{Binding PathToImage}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="*" Header="Phone Name" Binding="{Binding PhoneName}"></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Android Version" Binding="{Binding AndroidVersion}"></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Date of Release" Binding="{Binding ReleaseDate}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Options" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                                <Button Name="Details" Margin="0,2" Click="Details_Click" Content="Details" />
+                                <Button Name="Edit" Margin="0,2" Click="Edit_Click" Content="Edit" />
+                                <Button Name="Delete" Margin="0,2" Click="Delete_Click" Content="Delete" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <DockPanel Height="22" LastChildFill="False" Canvas.Left="50" Canvas.Top="0" Width="706">
+            <Button Name="ButtonClose" Content="X" Height="22" VerticalAlignment="Top" Width="43" BorderThickness="0" DockPanel.Dock="Right" Click="ButtonClose_Click"/>
+            <Label Content="Samsung Phones" Height="32" VerticalAlignment="Top" Margin="0,0,0,-10"/>
+        </DockPanel>
+        <Button Name="AddNewButton" Content="Add New Phone" FontSize="40" Canvas.Left="50" Canvas.Top="43" Width="706" Height="76" Background="White" Click="AddNewButton_Click"/>
+
+
+
+    </Canvas>
+</Window>

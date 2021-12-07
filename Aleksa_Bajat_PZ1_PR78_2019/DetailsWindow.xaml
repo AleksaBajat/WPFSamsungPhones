@@ -1,0 +1,42 @@
+﻿<Window x:Class="Aleksa_Bajat_PZ1_PR78_2019.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aleksa_Bajat_PZ1_PR78_2019"
+        mc:Ignorable="d"
+        Title="DetailsWindow" Height="450" Width="811.356" WindowStyle="None" AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Canvas Margin="0,25,382,29">
+        <Path Stroke="Gray" StrokeThickness="1" Name="UIPath" Canvas.Left="30">
+            <Path.Fill>
+                <SolidColorBrush Color="GhostWhite"></SolidColorBrush>
+            </Path.Fill>
+
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="50,0">
+                        <ArcSegment Size="40,100" RotationAngle="180" IsLargeArc="True" Point="50,400"></ArcSegment>
+                        <LineSegment Point="700,400"></LineSegment>
+                        <ArcSegment Size="40,100" RotationAngle="180" SweepDirection="Counterclockwise" IsLargeArc="True" Point="700,0"></ArcSegment>
+                        <LineSegment Point="50,0"></LineSegment>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+
+        <DockPanel Height="22" LastChildFill="False" Canvas.Left="71" Canvas.Top="0" Width="664">
+            <Button Name="ButtonClose" Content="X" Height="22" VerticalAlignment="Top" Width="50" BorderThickness="0" DockPanel.Dock="Right" Click="ButtonClose_Click"/>
+            <Label Content="Samsung Phones" Height="32" VerticalAlignment="Top" Margin="0,0,0,-10"/>
+        </DockPanel>
+        <Image Name="PhoneImage" Height="242" Canvas.Left="406" Canvas.Top="109" Width="360"/>
+        <Label FontWeight="Bold" FontSize="30" Name="LabelName" Content="Phone Name" Canvas.Left="50" Canvas.Top="45"/>
+        <RichTextBox IsReadOnly="True" Background="WhiteSmoke" Name="RichTextBox" Height="242" Canvas.Left="50" Canvas.Top="109" Width="337">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Canvas>
+</Window>
